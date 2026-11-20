@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Restaurant Ismail – Agadir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Outfit:wght@300;400;500&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--cob:#A53A2D;--deep:#5A1F18;--cream:#F6EFE0;--gold:#C99A2C;--green:#2A6B4F;--terra:#C9764F;--ink:#2a1712;
+--serif:"Fraunces","Tajawal",Georgia,serif;--sans:"Outfit","Tajawal",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px;background:var(--cream)}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 1rem/1.6 var(--sans)}
+a{color:inherit;text-decoration:none}:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+svg{display:block}.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+h1,h2{font-family:var(--serif);font-weight:400;margin:0;line-height:1.05}
+[dir=rtl] h1,[dir=rtl] h2{font-weight:700}
+
+.nav{position:fixed;inset:0 0 auto 0;z-index:30;padding-top:env(safe-area-inset-top,0px);transition:.3s}
+.nav.s{background:rgba(90,31,24,.94);backdrop-filter:blur(10px);box-shadow:0 8px 28px rgba(35,10,6,.35)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px;color:var(--cream)}
+.brand{display:flex;align-items:center;gap:12px;font:600 1.25rem var(--serif);white-space:nowrap}.brand svg{width:34px;height:34px}
+.links{display:flex;align-items:center;gap:26px;font-weight:500}.links a.l{opacity:.88}.links a.l:hover{opacity:1;color:var(--gold)}
+.lang{display:flex;gap:4px}.lang button{font:500 .78rem var(--sans);background:none;color:inherit;border:1px solid rgba(246,239,224,.4);border-radius:8px;padding:5px 9px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#1a1405}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;font:500 1rem var(--sans);border:2px solid var(--gold);cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s}
+.btn svg{width:20px;height:20px}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(35,10,6,.28)}
+.btn.g{background:var(--gold);color:#1a1405}.btn.o{background:transparent;color:var(--cream)}.btn.d{background:var(--cob);color:var(--cream);border-color:var(--cob)}
+
+/* hero */
+.hero{background:radial-gradient(ellipse at 70% 40%,#B5503C,var(--deep) 70%);color:var(--cream);padding:120px 0 90px;min-height:100svh;display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;width:100%}
+.hero h1{font-size:clamp(3.2rem,8vw,6.6rem);letter-spacing:-.02em}
+.hero .ad{margin:26px 0 38px;display:flex;align-items:center;gap:12px;font-size:1.1rem;color:#e0d6bf}.hero .ad svg{width:22px;height:22px;flex:none}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.arch{position:relative;aspect-ratio:3/4.3;border-radius:999px 999px 14px 14px;overflow:hidden;border:5px solid var(--gold);box-shadow:0 0 0 10px rgba(201,154,44,.18),0 40px 70px rgba(30,8,5,.55)}
+.arch svg{width:100%;height:100%}
+.arch::after{content:"";position:absolute;inset:10px;border-radius:999px 999px 6px 6px;border:2px solid rgba(246,239,224,.55);pointer-events:none}
+.arch .m{animation:rev 1.4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rev{from{clip-path:circle(0% at 50% 40%)}to{clip-path:circle(80% at 50% 40%)}}
+.band{height:46px;background:var(--deep)}.band svg{width:100%;height:100%}
+
+section{padding:96px 0}
+.t{display:flex;align-items:center;gap:18px;margin-bottom:46px}.t h2{font-size:clamp(2rem,4vw,3rem);color:var(--cob)}
+.t i{flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}[dir=rtl] .t i{transform:scaleX(-1)}
+.grp{margin-bottom:44px}.grp>h3{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 1.2rem var(--serif);color:var(--c)}
+.grp>h3::before{content:"";width:14px;height:14px;transform:rotate(45deg);background:var(--c)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px}
+.tile{position:relative;aspect-ratio:1;display:grid;place-items:center;align-content:center;gap:8px;text-align:center;padding:14px;color:var(--c);font-weight:500;font-size:.95rem;line-height:1.25;background:var(--c);clip-path:polygon(29% 0,71% 0,100% 29%,100% 71%,71% 100%,29% 100%,0 71%,0 29%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.tile::before{content:"";position:absolute;inset:4px;background:#fffaf0;clip-path:inherit;transition:background .3s}
+.tile>*{position:relative}.tile svg{width:64px;height:64px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tile:hover{transform:translateY(-6px) rotate(2deg)}.tile:hover::before{background:var(--c)}.tile:hover{color:var(--cream)}
+.c1{--c:var(--gold)}.c2{--c:var(--terra)}.c3{--c:var(--green)}.c4{--c:var(--cob)}
+.c1.grp>h3,.c1 .tile{--c:#a87c14}
+
+.amb{background:var(--cob);color:var(--cream);position:relative}
+.amb .t h2{color:var(--cream)}
+.med{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:34px 20px;text-align:center}
+.med div{display:grid;justify-items:center;gap:14px;font-weight:500}
+.ring{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;background:var(--deep);border:3px solid var(--gold);box-shadow:0 0 0 6px rgba(201,154,44,.18);transition:transform .4s}
+.med div:hover .ring{transform:rotate(45deg)}.med div:hover .ring svg{transform:rotate(-45deg)}.ring svg{width:50px;height:50px;fill:none;stroke:var(--cream);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .4s}
+.ring.a{border-color:var(--terra)}.ring.b{border-color:var(--green)}
+.meals{margin-top:60px;padding-top:50px;border-top:2px dashed rgba(201,154,44,.5)}
+
+.vis .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.vis h2{color:var(--cob);font-size:clamp(2rem,4vw,3rem);margin-bottom:26px}
+.row{display:flex;gap:14px;align-items:center;margin-bottom:14px;font-size:1.1rem}.row svg{width:26px;height:26px;flex:none;stroke:var(--terra);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vis .cta{margin-top:26px}
+.form{background:#fffaf0;border:2px solid var(--gold);padding:34px;border-radius:6px;box-shadow:0 20px 50px rgba(165,58,45,.15)}
+.form h2{font-size:1.8rem;margin-bottom:20px}
+.f{display:grid;gap:6px;margin-bottom:16px;font-weight:500;font-size:.92rem;color:var(--cob)}
+.f input{font:400 1rem var(--sans);padding:12px 14px;border:1.5px solid #c9bda4;border-radius:8px;background:#fff;color:var(--ink)}.f input:focus{outline:3px solid rgba(201,154,44,.5);border-color:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form .btn{width:100%;justify-content:center}
+
+footer{background:var(--deep);color:#d9d0bb;padding:0 0 34px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding-top:34px}
+footer a{display:inline-flex;gap:8px;align-items:center}footer a:hover{color:var(--gold)}
+
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:44px}.arch{max-width:320px;margin-inline:auto;order:-1}.vis .wrap{grid-template-columns:1fr}.hero{padding-top:100px}}
+@media (max-width:620px){.links a.l{display:none}.nav .wrap{height:64px}.brand span{font-size:1.05rem}section{padding:70px 0}.tiles{grid-template-columns:repeat(2,1fr);gap:12px}.tile svg{width:54px;height:54px}.two{grid-template-columns:1fr}.cta .btn{flex:1 1 100%;justify-content:center}.form{padding:24px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="nav" id="nav"><div class="wrap">
+ <a class="brand" href="#top"><i data-z="logo"></i><span data-i="brand"></span></a>
+ <nav class="links"><a class="l" href="#menu" data-i="menu"></a><a class="l" href="#visit" data-i="visit"></a>
+  <div class="lang" role="group" aria-label="Language"><button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="ar">عربي</button></div></nav>
+</div></header>
+
+<header class="hero" id="top"><div class="wrap">
+ <div>
+  <h1 data-i="brand"></h1>
+  <div class="ad"><i data-ic="pin"></i><span>Boulevard 20 Août, Agadir 80000</span></div>
+  <div class="cta"><a class="btn g" href="#visit"><i data-ic="cal"></i><span data-i="reserve"></span></a><a class="btn o" href="#menu"><i data-ic="bowl"></i><span data-i="menu"></span></a></div>
+ </div>
+ <div class="arch" aria-hidden="true"><div class="m" id="hm" style="height:100%"></div></div>
+</div></header>
+<div class="band" id="b1" aria-hidden="true"></div>
+
+<main>
+<section id="menu"><div class="wrap">
+ <div class="t"><h2 data-i="menu"></h2><i></i></div>
+ <div class="grp c1" style="--c:#a87c14"><h3 data-i="soup"></h3><div class="tiles"><div class="tile"><i data-ic="bowl"></i><span data-i="harira"></span></div></div></div>
+ <div class="grp c2" style="--c:var(--terra)"><h3 data-i="tagines"></h3><div class="tiles c2">
+  <div class="tile"><i data-ic="tag1"></i><span data-i="lamb"></span></div>
+  <div class="tile"><i data-ic="tag2"></i><span data-i="chicken"></span></div>
+  <div class="tile"><i data-ic="tag3"></i><span data-i="veg"></span></div></div></div>
+ <div class="grp c3" style="--c:var(--green)"><h3 data-i="grills"></h3><div class="tiles c3">
+  <div class="tile"><i data-ic="sk1"></i><span data-i="kebab"></span></div>
+  <div class="tile"><i data-ic="sk2"></i><span data-i="taouk"></span></div>
+  <div class="tile"><i data-ic="sk3"></i><span data-i="kofta"></span></div></div></div>
+ <div class="grp c4" style="--c:var(--deep)"><h3 data-i="sea"></h3><div class="tiles c4">
+  <div class="tile"><i data-ic="ring"></i><span data-i="calamari"></span></div>
+  <div class="tile"><i data-ic="shr"></i><span data-i="shrimp"></span></div></div></div>
+</div></section>
+
+<div class="band" id="b2" aria-hidden="true"></div>
+<section class="amb"><div class="wrap">
+ <div class="med">
+  <div><span class="ring"><i data-ic="couch"></i></span><span data-i="a1"></span></div>
+  <div><span class="ring a"><i data-ic="arch"></i></span><span data-i="a2"></span></div>
+  <div><span class="ring b"><i data-ic="olive"></i></span><span data-i="a3"></span></div>
+  <div><span class="ring"><i data-ic="heart"></i></span><span data-i="a4"></span></div>
+  <div><span class="ring a"><i data-ic="plates"></i></span><span data-i="a5"></span></div>
+ </div>
+ <div class="med meals">
+  <div><span class="ring b"><i data-ic="sun"></i></span><span data-i="mb"></span></div>
+  <div><span class="ring"><i data-ic="plates"></i></span><span data-i="ml"></span></div>
+  <div><span class="ring a"><i data-ic="moon"></i></span><span data-i="md"></span></div>
+ </div>
+</div></section>
+<div class="band" id="b3" aria-hidden="true"></div>
+
+<section class="vis" id="visit"><div class="wrap">
+ <div>
+  <h2 data-i="find"></h2>
+  <div class="row"><i data-ic="pin"></i><span>Boulevard 20 Août, Agadir 80000</span></div>
+  <div class="row"><i data-ic="mail"></i><a href="mailto:redanaitsi@gmail.com">redanaitsi@gmail.com</a></div>
+  <div class="cta">
+   <a class="btn d" target="_blank" rel="noopener" href="https://maps.google.com/maps?daddr=Boulevar%2020%20Aout,%20Agadir%2080000%20Maroc@30.41109,-9.597049"><i data-ic="pin"></i><span data-i="dir"></span></a>
+   <a class="btn o" style="color:var(--cob)" target="_blank" rel="noopener" href="https://www.tripadvisor.fr/Restaurant_Review-g293731-d23854727-Reviews-Restaurant_Ismail_Agadir-Agadir_Souss_Massa.html"><i data-ic="star"></i>Tripadvisor</a>
+  </div>
+ </div>
+ <div class="form">
+  <h2 data-i="res"></h2>
+  <label class="f"><span data-i="fn"></span><input id="n" autocomplete="name"></label>
+  <div class="two"><label class="f"><span data-i="fd"></span><input id="d" type="date"></label><label class="f"><span data-i="fg"></span><input id="g" type="number" min="1" max="30" value="2"></label></div>
+  <button class="btn g" id="send"><i data-ic="mail"></i><span data-i="send"></span></button>
+ </div>
+</div></section>
+</main>
+
+<div class="band" id="b4" aria-hidden="true"></div>
+<footer><div class="wrap"><span class="brand"><i data-z="logo"></i><span data-i="brand"></span></span>
+ <a target="_blank" rel="noopener" href="https://www.tripadvisor.fr/Restaurant_Review-g293731-d23854727-Reviews-Restaurant_Ismail_Agadir-Agadir_Souss_Massa.html">Tripadvisor</a>
+ <a href="mailto:redanaitsi@gmail.com">redanaitsi@gmail.com</a></div></footer>
+
+<script>
+var T={en:{brand:"Restaurant Ismail",menu:"Menu",visit:"Visit",reserve:"Reserve a table",soup:"Soup",tagines:"Tagines",grills:"Grills",sea:"Seafood",harira:"Moroccan harira",lamb:"Lamb and prune tagine",chicken:"Chicken tagine with olives",veg:"Vegetable tagine",kebab:"Kebab skewers",taouk:"Shish taouk",kofta:"Kofta",calamari:"Crispy fried calamari",shrimp:"Shrimp tagine",a1:"Cozy indoor couches",a2:"Small patio at the back",a3:"Olives to start",a4:"Friendly service",a5:"Generous portions",mb:"Breakfast",ml:"Lunch",md:"Dinner",find:"Find us",dir:"Get directions",res:"Reserve a table",fn:"Name",fd:"Date",fg:"Guests",send:"Send request",ms:"Table reservation",mt:"Hello, I would like to reserve a table."},
+fr:{brand:"Restaurant Ismail",menu:"Carte",visit:"Venir",reserve:"Réserver une table",soup:"Soupe",tagines:"Tajines",grills:"Grillades",sea:"Mer",harira:"Harira marocaine",lamb:"Tajine d’agneau aux pruneaux",chicken:"Tajine de poulet aux olives",veg:"Tajine de légumes",kebab:"Brochettes de kebab",taouk:"Shish taouk",kofta:"Kefta",calamari:"Calamars frits croustillants",shrimp:"Tajine de crevettes",a1:"Canapés à l’intérieur",a2:"Petite terrasse à l’arrière",a3:"Des olives pour commencer",a4:"Service chaleureux",a5:"Portions généreuses",mb:"Petit déjeuner",ml:"Déjeuner",md:"Dîner",find:"Nous trouver",dir:"Itinéraire",res:"Réserver une table",fn:"Nom",fd:"Date",fg:"Personnes",send:"Envoyer la demande",ms:"Réservation de table",mt:"Bonjour, je souhaite réserver une table."},
+ar:{brand:"مطعم إسماعيل",menu:"القائمة",visit:"زورونا",reserve:"احجز طاولة",soup:"الشوربة",tagines:"الطواجين",grills:"المشويات",sea:"المأكولات البحرية",harira:"الحريرة المغربية",lamb:"طاجين لحم الغنم بالبرقوق",chicken:"طاجين الدجاج بالزيتون",veg:"طاجين الخضر",kebab:"أسياخ الكباب",taouk:"شيش طاووق",kofta:"كفتة",calamari:"كالاماري مقرمش",shrimp:"طاجين الجمبري",a1:"أرائك مريحة في الداخل",a2:"باحة صغيرة في الخلف",a3:"زيتون للبداية",a4:"خدمة ودودة",a5:"حصص سخية",mb:"فطور",ml:"غداء",md:"عشاء",find:"زورونا",dir:"الاتجاهات",res:"احجز طاولة",fn:"الاسم",fd:"التاريخ",fg:"الأشخاص",send:"إرسال الطلب",ms:"حجز طاولة",mt:"مرحبًا، أودّ حجز طاولة."}};
+var P='fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+var tg=function(x){return '<path d="M6 38h36M10 38l2-6h24l2 6M14 32c0-9 6-17 10-23 4 6 10 14 10 23"/><circle cx="24" cy="8" r="2"/>'+x};
+var sk=function(f){return '<path d="M6 42L42 6"/>'+[[14,34],[21,27],[28,20],[35,13]].map(function(p){return f(p[0],p[1])}).join('')};
+var IC={bowl:'<path d="M6 22h36c0 10-8 18-18 18S6 32 6 22zM18 15c-2-3 2-5 0-8M26 15c-2-3 2-5 0-8M34 15c-2-3 2-5 0-8"/>',
+tag1:tg('<circle cx="20" cy="26" r="2"/><circle cx="28" cy="26" r="2"/><circle cx="24" cy="19" r="2"/>'),tag2:tg('<ellipse cx="19" cy="26" rx="3" ry="2"/><ellipse cx="29" cy="26" rx="3" ry="2"/><ellipse cx="24" cy="19" rx="3" ry="2"/>'),tag3:tg('<path d="M18 27c4-7 10-7 10-7 0 5-3 9-10 7z"/>'),
+sk1:sk(function(x,y){return '<circle cx="'+x+'" cy="'+y+'" r="4"/>'}),sk2:sk(function(x,y){return '<rect x="'+(x-4)+'" y="'+(y-4)+'" width="8" height="8" rx="1"/>'}),sk3:sk(function(x,y){return '<ellipse cx="'+x+'" cy="'+y+'" rx="6" ry="3.5" transform="rotate(-45 '+x+' '+y+')"/>'}),
+ring:'<circle cx="16" cy="18" r="8"/><circle cx="16" cy="18" r="3"/><circle cx="32" cy="18" r="8"/><circle cx="32" cy="18" r="3"/><circle cx="24" cy="33" r="8"/><circle cx="24" cy="33" r="3"/>',
+shr:'<path d="M12 36h24M16 36c-6-12 6-26 18-18 4 3 2 8-2 8-6 0-6 10-16 10zM30 14l4-4"/><circle cx="31" cy="20" r="1"/>',
+couch:'<path d="M10 22v-6a4 4 0 014-4h20a4 4 0 014 4v6M5 26a4 4 0 018 0v6h22v-6a4 4 0 018 0v10H5zM11 40v3M37 40v3"/>',
+arch:'<path d="M8 43V22a16 16 0 0132 0v21M15 43V24a9 9 0 0118 0v19M24 28v15"/>',
+olive:'<path d="M6 40C20 36 32 26 42 8"/><ellipse cx="16" cy="30" rx="6" ry="3" transform="rotate(-35 16 30)"/><ellipse cx="26" cy="22" rx="6" ry="3" transform="rotate(-45 26 22)"/><circle cx="32" cy="32" r="4"/><circle cx="40" cy="26" r="4"/>',
+heart:'<path d="M24 40S6 29 6 17a9 9 0 0118-3 9 9 0 0118 3c0 12-18 23-18 23z"/>',
+plates:'<circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="10"/>',sun:'<circle cx="24" cy="24" r="8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5M11 11l3 3M34 34l3 3M37 11l-3 3M14 34l-3 3"/>',moon:'<path d="M32 8a17 17 0 1012 25A15 15 0 0132 8z"/>',
+pin:'<path d="M24 44S10 30 10 20a14 14 0 0128 0c0 10-14 24-14 24z"/><circle cx="24" cy="20" r="5"/>',cal:'<rect x="6" y="9" width="36" height="32" rx="4"/><path d="M6 19h36M15 5v8M33 5v8"/>',mail:'<rect x="5" y="9" width="38" height="30" rx="4"/><path d="M6 12l18 14 18-14"/>',star:'<path d="M24 5l5.5 13.5L44 20l-11 9.5L36 44l-12-8-12 8 3-14.5L4 20l14.5-1.5z"/>'};
+document.querySelectorAll('[data-ic]').forEach(function(e){e.innerHTML='<svg viewBox="0 0 48 48" '+P+'>'+IC[e.dataset.ic]+'</svg>';e.style.display='contents'});
+/* zellige mosaic generator */
+function cell(i,j,u){var x=i*u,y=j*u,c=u/2,a=(i+j)%2,bg=a?'#F6EFE0':'#A53A2D',fg=a?'#A53A2D':'#F6EFE0',ac=['#C99A2C','#2A6B4F','#C9764F'][(i+2*j)%3],s=u*.64,t=s*.56,r=function(w,f,k){return '<rect x="'+(-w/2)+'" y="'+(-w/2)+'" width="'+w+'" height="'+w+'" fill="'+f+'"'+(k?' transform="rotate(45)"':'')+'/>'};
+return '<rect x="'+x+'" y="'+y+'" width="'+u+'" height="'+u+'" fill="'+bg+'" stroke="#5A1F18" stroke-width=".8"/><g transform="translate('+(x+c)+' '+(y+c)+')">'+r(s,fg)+r(s,fg,1)+r(t,ac)+r(t,ac,1)+'<circle r="'+u*.06+'" fill="'+bg+'"/></g>'}
+function mos(cols,rows,u,box){var o='';for(var j=0;j<rows;j++)for(var i=0;i<cols;i++)o+=cell(i,j,u);return '<svg viewBox="0 0 '+cols*u+' '+rows*u+'" preserveAspectRatio="'+(box||'xMidYMid slice')+'" width="100%" height="100%">'+o+'</svg>'}
+document.getElementById('hm').innerHTML=mos(6,9,60);
+['b1','b2','b3','b4'].forEach(function(id){document.getElementById(id).innerHTML=mos(60,1,46,'xMinYMid slice')});
+document.querySelectorAll('[data-z=logo]').forEach(function(e){e.style.display='contents';e.innerHTML='<svg viewBox="-24 -24 48 48"><g fill="#C99A2C"><rect x="-18" y="-18" width="36" height="36"/><rect x="-18" y="-18" width="36" height="36" transform="rotate(45)"/></g><g fill="#A53A2D"><rect x="-11" y="-11" width="22" height="22"/><rect x="-11" y="-11" width="22" height="22" transform="rotate(45)"/></g><rect x="-5" y="-5" width="10" height="10" transform="rotate(45)" fill="#F6EFE0"/></svg>'});
+/* language */
+var L='en';function setL(l){L=l;var h=document.documentElement;h.lang=l;h.dir=l==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i]').forEach(function(e){e.textContent=T[l][e.dataset.i]});document.querySelectorAll('[data-l]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});document.title=T[l].brand+' – Agadir'}
+document.querySelectorAll('[data-l]').forEach(function(b){b.onclick=function(){setL(b.dataset.l)}});setL('en');
+document.getElementById('send').onclick=function(){var t=T[L],b=t.mt+'\n\n'+t.fn+': '+document.getElementById('n').value+'\n'+t.fd+': '+document.getElementById('d').value+'\n'+t.fg+': '+document.getElementById('g').value;location.href='mailto:redanaitsi@gmail.com?subject='+encodeURIComponent(t.ms)+'&body='+encodeURIComponent(b)};
+var nv=document.getElementById('nav');function f(){nv.classList.toggle('s',scrollY>30)}f();addEventListener('scroll',f,{passive:true});
+</script>
+</body>
+</html>
